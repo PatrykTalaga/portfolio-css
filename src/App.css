@@ -112,7 +112,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   border: 2px solid white;
   border-radius: 2rem;
   min-height: 500px;
@@ -183,23 +183,158 @@
   background-color: #0077ff;
 }
 
-.gallery dialog {
+.gallery #gallery-dialog {
+  display: none;
   z-index: 20;
-  width: 90%;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   border: none;
   background: transparent;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%; /* Optional: Ensure content fills available height */
 }
-.gallery dialog img {
-  max-height: 100%;
-  max-width: 100%;
+
+.gallery #gallery-dialog img {
+  max-height: 90vh;
+  max-width: 80%;
   box-shadow: none;
 }
-.gallery dialog img:hover {
+.gallery #gallery-dialog img:hover {
   scale: 100%;
   cursor: auto;
 }
-.gallery dialog::backdrop {
+.gallery #gallery-dialog::backdrop {
   background-color: hsla(0, 0%, 0%, 0.863);
+}
+
+.gallery .x-overlay {
+  position: absolute;
+  top: 4rem; /* Adjust vertical spacing from the top */
+  right: 4rem; /* Adjust horizontal spacing from the right */
+  font-size: 2rem; /* Adjust font size for the "X" */
+  color: hsla(0, 0%, 0%, 0.788); /* Adjust color as needed */
+  background-color: hsl(0, 0%, 100%);
+  padding: 0.5rem 1.5rem; /* Add some padding if needed */
+  border-radius: 1rem; /* Optional rounded corners for the "X" */
+  cursor: pointer; /* Optional hover effect for interactivity */
+  transition: 0.2s ease-in;
+}
+.gallery .x-overlay:hover {
+  /*   scale: 125%; */
+  /*  border-radius: 3rem; */
+  background-color: hsl(0, 100%, 50%);
+  color: white;
+  /*  top: 5rem; 
+  right: 5rem; */
+}
+/* 555555555555555555555 */
+.smaller-projects {
+  width: 40%;
+  gap: 2.5rem;
+  padding: 2rem;
+  background-color: hsla(29, 100%, 53%, 0.521);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid white;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.smaller-projects .sm-project-container {
+  min-height: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(229, 100%, 53%);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  box-shadow: 4px 4px 10px black;
+  transition: 0.5s ease-in-out;
+}
+.smaller-projects .sm-project-container p {
+  margin: 0.25rem;
+}
+.smaller-projects .sm-project-container:hover {
+  scale: 105%;
+}
+.smaller-projects .placeholder {
+  background-color: #ff0000;
+  min-height: 225px;
+}
+
+.smaller-projects #calculator-app {
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+  /* flex-direction: column; */
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%; /* Optional: Ensure content fills available height */
+  color: black;
+  display: none;
+}
+.smaller-projects #calculator-app h1 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.75rem 1rem 1.5rem 1rem;
+  border-radius: 1rem;
+  border: 3px solid white;
+  background-color: black;
+}
+.close-x {
+  font-size: 3rem;
+  color: hsl(2, 100%, 51%);
+}
+.smaller-projects #calculator-app h1:hover {
+  color: hsl(2, 100%, 51%);
+  /* border-color: hsl(2, 100%, 51%); */
+  cursor: pointer;
+}
+
+.smaller-projects #calculator-app::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.438);
+}
+
+.smaller-projects .projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid white;
+  border-radius: 2rem;
+  width: 75%;
+}
+
+/* 55555555555555555555555555 */
+.contacts-container {
+  max-width: 40%;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: hsla(29, 100%, 53%, 0.521);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 2rem;
+  margin: 1.5rem 0;
+  color: black;
+}
+.contacts-container h1 {
+  margin: 0 auto;
+  font-size: 4rem;
+}
+.contacts-container div {
+  margin: 0 auto;
+}
+.contacts-container p {
+  margin: 0;
+  font-size: 2rem;
 }

@@ -1,19 +1,19 @@
 type PhotosType = Array<string>;
 
 const photos: PhotosType = [
-  `https://i.imgur.com/NxDwjs1.jpg`,
-  `https://i.imgur.com/lQZjvVP.jpg`,
-  `https://i.imgur.com/F9Okfuv.jpg`,
-  `https://i.imgur.com/3f6D1gs.jpg`,
-  `https://i.imgur.com/EHW7fOG.jpg`,
-  `https://i.imgur.com/VolDTgM.jpg`,
-  `https://i.imgur.com/jf3RSfU.jpg`,
-  `https://i.imgur.com/TJWXqK2.jpg`,
-  `https://i.imgur.com/VwpRND0.jpg`,
-  `https://i.imgur.com/q4Fy7cK.jpg`,
-  `https://i.imgur.com/Vexvw1d.jpg`,
-  `https://i.imgur.com/VNErXbm.jpg`,
-  `https://i.imgur.com/3qYMEzC.jpg`,
+  `https://i.imgur.com/q7REDNG.jpg`,
+  `https://i.imgur.com/NlLyzDS.jpg`,
+  `https://i.imgur.com/s7xynCZ.jpg`,
+  `https://i.imgur.com/SG1JB1d.jpg`,
+  `https://i.imgur.com/aky8mOm.jpg`,
+  `https://i.imgur.com/FgcDZwP.jpg`,
+  `https://i.imgur.com/ebuKUjF.jpg`,
+  `https://i.imgur.com/k9cNExx.jpg`,
+  `https://i.imgur.com/fNYT6LU.jpg`,
+  `https://i.imgur.com/rAt98dF.jpg`,
+  `https://i.imgur.com/yqfN9sn.jpg`,
+  `https://i.imgur.com/j2HfZxp.jpg`,
+  `https://i.imgur.com/Z3Lkcxi.jpg`,
 ];
 
 export default photos;

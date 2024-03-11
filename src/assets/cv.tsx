@@ -83,7 +83,7 @@ const cvData: CVType = {
   hobbies: [`Fotografia`],
 };
 
-export const contactData = {
+export const contactData: contactType = {
   name: "Patryk Jan Talaga",
   addressLine1: `***********`,
   addressLine2: `***********`,

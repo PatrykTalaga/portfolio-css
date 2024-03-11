@@ -27,46 +27,30 @@ const projects: ProjectsType = [
     github: `https://github.com/PatrykTalaga/my-library/`,
   },
   {
-    title: "My Library",
+    title: "Placeholder",
     embedId: "oFxaYJ7HW40",
-    text: `Wirtualna biblioteka. Przechowuje okładki książek na serverze oraz dane w lokalnej bazie danych mongoDB.
-    Autoryzacja użytkownika za pomocą next-auth z uprawnieniami zależnimi od roli:
-    Guest - wyświetlanie książkek, komentarzy i listy książek do przeczytania;
-    User - dodawanie komentarzy i edytować swoich komentarzy; Admin - dodawanie i edycja książek,
-    wszystkich komentarzy oraz listy książek do przeczytania`,
+    text: `Placeholder `,
     tools: `Next.Js 14, Typescript, React, Tailwind, mongoose, next-auth`,
     github: `https://github.com/PatrykTalaga/my-library/`,
   },
   {
-    title: "My Library",
+    title: "Placeholder 2",
     embedId: "oFxaYJ7HW40",
-    text: `Wirtualna biblioteka. Przechowuje okładki książek na serverze oraz dane w lokalnej bazie danych mongoDB.
-    Autoryzacja użytkownika za pomocą next-auth z uprawnieniami zależnimi od roli:
-    Guest - wyświetlanie książkek, komentarzy i listy książek do przeczytania;
-    User - dodawanie komentarzy i edytować swoich komentarzy; Admin - dodawanie i edycja książek,
-    wszystkich komentarzy oraz listy książek do przeczytania`,
+    text: `Placeholder 2`,
     tools: `Next.Js 14, Typescript, React, Tailwind, mongoose, next-auth`,
     github: `https://github.com/PatrykTalaga/my-library/`,
   },
   {
-    title: "My Library",
+    title: "Placeholder 3",
     embedId: "oFxaYJ7HW40",
-    text: `Wirtualna biblioteka. Przechowuje okładki książek na serverze oraz dane w lokalnej bazie danych mongoDB.
-    Autoryzacja użytkownika za pomocą next-auth z uprawnieniami zależnimi od roli:
-    Guest - wyświetlanie książkek, komentarzy i listy książek do przeczytania;
-    User - dodawanie komentarzy i edytować swoich komentarzy; Admin - dodawanie i edycja książek,
-    wszystkich komentarzy oraz listy książek do przeczytania`,
+    text: `Placeholder 3`,
     tools: `Next.Js 14, Typescript, React, Tailwind, mongoose, next-auth`,
     github: `https://github.com/PatrykTalaga/my-library/`,
   },
   {
-    title: "My Library",
+    title: "Placeholder 4",
     embedId: "oFxaYJ7HW40",
-    text: `Wirtualna biblioteka. Przechowuje okładki książek na serverze oraz dane w lokalnej bazie danych mongoDB.
-    Autoryzacja użytkownika za pomocą next-auth z uprawnieniami zależnimi od roli:
-    Guest - wyświetlanie książkek, komentarzy i listy książek do przeczytania;
-    User - dodawanie komentarzy i edytować swoich komentarzy; Admin - dodawanie i edycja książek,
-    wszystkich komentarzy oraz listy książek do przeczytania`,
+    text: `Placeholder 4`,
     tools: `Next.Js 14, Typescript, React, Tailwind, mongoose, next-auth`,
     github: `https://github.com/PatrykTalaga/my-library/`,
   },

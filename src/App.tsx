@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import MainProjects from "./components/MainProjects";
 import { useRef } from "react";
 import Gallery from "./components/Gallery";
+import SmallerProjects from "./components/SmallerProjects";
+import Contact from "./components/Contact";
 
 function App() {
   const mainProjectsRef = useRef<null | HTMLHeadingElement>(null);
@@ -38,8 +40,8 @@ function App() {
   }
   function scrollToContact() {
     if (contactRef.current !== null) {
-      contactRef.current.scrollIntoView();
-      window.scroll(0, window.scrollY + -150);
+      //scroll to bottom
+      window.scrollTo(0, document.body.scrollHeight);
     }
   }
 
@@ -67,7 +69,7 @@ function App() {
         <h1 ref={smallerProjectsRef} className="portfolio-header">
           Mniejsze Projekty
         </h1>
-        <MainProjects />
+        <SmallerProjects />
         <h1 ref={galleryRef} className="portfolio-header">
           Galeria
         </h1>
@@ -75,7 +77,7 @@ function App() {
         <h1 ref={contactRef} className="portfolio-header">
           Kontakt
         </h1>
-        <MainProjects />
+        <Contact />
       </div>
     </>
   );
