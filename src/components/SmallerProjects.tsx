@@ -8,7 +8,7 @@ export default function SmallerProjects() {
     /*  dialogCalc.showModal(); */
     if (dialogCalc)
       return () => {
-        /*  dialogCalc.showModal(); */
+        /* dialogCalc.showModal(); */
         dialogCalc.close();
       };
   }, []);
@@ -18,6 +18,7 @@ export default function SmallerProjects() {
       "calculator-app"
     ) as HTMLDialogElement;
     if (calculatorDialog) {
+      calculatorDialog.close();
       calculatorDialog.style.display = "flex";
       calculatorDialog.showModal();
     }
@@ -37,7 +38,7 @@ export default function SmallerProjects() {
       <dialog ref={refCalc} id="calculator-app" className="modal-image" open>
         <Calculator />
         <h1 onClick={() => closeCalculator()}>
-          <span className="close-x">X</span> Close
+          <span className="close-x">X</span> Zamknij
         </h1>
       </dialog>
       <div className="sm-project-container" onClick={openCalculator}>

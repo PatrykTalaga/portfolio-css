@@ -21,6 +21,7 @@ export default function Gallery() {
       "gallery-dialog"
     ) as HTMLDialogElement;
     if (dialog) {
+      dialog.close(); //figure out while it is open on mount...
       dialog.style.display = "flex";
       dialog.showModal();
     }
