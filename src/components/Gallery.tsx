@@ -9,11 +9,11 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Gallery() {
   const [currentPhoto, setCurrentPhoto] = useState("");
-  const refGallery = useRef(null); //react strict mode opens dialog element
+  const refGallery = useRef<HTMLDialogElement>(null); //react strict mode opens dialog element
   useEffect(() => {
     const dialogGallery = refGallery.current;
     /*  dialogCalc.showModal(); */
-    return () => dialogGallery.close();
+    if (dialogGallery) return () => dialogGallery.close();
   }, []);
 
   function openModal() {

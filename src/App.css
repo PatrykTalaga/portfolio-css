@@ -244,6 +244,7 @@
 
 .smaller-projects .sm-project-container {
   min-height: 225px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,6 +255,10 @@
   padding-bottom: 1rem;
   box-shadow: 4px 4px 10px black;
   transition: 0.5s ease-in-out;
+}
+.smaller-projects .sm-project-icon {
+  max-height: 150px;
+  max-width: 150px;
 }
 .smaller-projects .sm-project-container p {
   margin: 0.25rem;

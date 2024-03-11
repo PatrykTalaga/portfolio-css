@@ -2,11 +2,15 @@ import { useEffect, useRef } from "react";
 import Calculator from "./Calculator";
 
 export default function SmallerProjects() {
-  const refCalc = useRef(null); //react strict mode opens dialog element
+  const refCalc = useRef<HTMLDialogElement>(null); //react strict mode opens dialog element
   useEffect(() => {
     const dialogCalc = refCalc.current;
     /*  dialogCalc.showModal(); */
-    return () => dialogCalc.close();
+    if (dialogCalc)
+      return () => {
+        /*  dialogCalc.showModal(); */
+        dialogCalc.close();
+      };
   }, []);
 
   function openCalculator() {
@@ -37,25 +41,41 @@ export default function SmallerProjects() {
         </h1>
       </dialog>
       <div className="sm-project-container" onClick={openCalculator}>
-        <img className="calculator-svg" src="/src/assets/calculator.svg"></img>
+        <img
+          className="calculator-svg"
+          src="calculator.svg"
+          alt="calculator icon"
+        ></img>
         <p>Calculator</p>
         <p>Calculator</p>
       </div>
 
       <div className="sm-project-container placeholder">
-        <img className="calculator-svg" src="/src/assets/calculator.svg"></img>
+        <img
+          className="sm-project-icon"
+          src="calculator.svg"
+          alt="calculator icon"
+        ></img>
         <p>placeholder</p>
         <p>placeholder</p>
       </div>
 
       <div className="sm-project-container placeholder">
-        <img className="calculator-svg" src="/src/assets/calculator.svg"></img>
+        <img
+          className="calculator-svg"
+          src="calculator.svg"
+          alt="calculator icon"
+        ></img>
         <p>placeholder</p>
         <p>placeholder</p>
       </div>
 
       <div className="sm-project-container placeholder">
-        <img className="calculator-svg" src="/src/assets/calculator.svg"></img>
+        <img
+          className="calculator-svg"
+          src="calculator.svg"
+          alt="calculator icon"
+        ></img>
         <p>placeholder</p>
         <p>placeholder</p>
       </div>
