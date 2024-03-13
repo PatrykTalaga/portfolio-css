@@ -1,0 +1,133 @@
+.smaller-projects {
+  width: 80%;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: hsla(29, 100%, 53%, 0.521);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid white;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.smaller-projects .sm-project-container {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  word-break: break-all;
+  background-color: hsl(229, 100%, 53%);
+  border-radius: 2rem;
+  padding: 0 0.5rem;
+  /* padding-bottom: 1rem; */
+  box-shadow: 4px 4px 10px black;
+  transition: 0.5s ease-in-out;
+}
+.smaller-projects .sm-project-icon {
+  max-height: 100px;
+  max-width: 100px;
+}
+.smaller-projects .sm-project-container p {
+  margin: 0.25rem;
+}
+.smaller-projects .sm-project-container:hover {
+  scale: 105%;
+}
+.smaller-projects .sm-project-container.red-bg {
+  background-color: hsl(0, 100%, 50%);
+}
+.smaller-projects .sm-project-container.green-bg {
+  background-color: hsl(108, 100%, 42%);
+}
+
+.smaller-projects #calculator-app {
+  z-index: 20;
+  /*  width: 100vw;
+  height: 100vh; */
+  border: none;
+  background: transparent;
+  overflow: hidden;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  /*  min-height: 100%; */ /* Optional: Ensure content fills available height */
+  color: black;
+  display: none;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.smaller-projects #calculator-app h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: 3px solid white;
+  background-color: black;
+  /*  margin-top: 3rem; */
+}
+.close-x {
+  font-size: 1.5rem;
+  color: hsl(2, 100%, 51%);
+  padding-right: 0.25rem;
+}
+.smaller-projects #calculator-app h1:hover {
+  color: hsl(2, 100%, 51%);
+  /* border-color: hsl(2, 100%, 51%); */
+  cursor: pointer;
+}
+
+.smaller-projects #calculator-app::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.438);
+}
+
+.smaller-projects .projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid white;
+  border-radius: 2rem;
+  width: 75%;
+}
+
+@media screen and (min-width: 480px) {
+  .smaller-projects #calculator-app h1 {
+    font-size: 1.5rem;
+
+    padding: 1rem 1.5rem;
+  }
+  .close-x {
+    font-size: 3rem;
+
+    padding-right: 0.5rem;
+  }
+  .smaller-projects {
+    width: 40%;
+    gap: 2.5rem;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .smaller-projects .sm-project-container {
+    min-height: 225px;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .smaller-projects .sm-project-icon {
+    max-height: 150px;
+    max-width: 150px;
+  }
+  .smaller-projects #calculator-app {
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .smaller-projects #calculator-app h1 {
+    margin-right: 0;
+    scale: 1;
+  }
+}

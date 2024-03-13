@@ -1,4 +1,5 @@
 import Calculator from "./Calculator";
+import "./SmallerProjects.css";
 
 export default function SmallerProjects() {
   function openCalculator() {
@@ -23,15 +24,15 @@ export default function SmallerProjects() {
 
   return (
     <div className="smaller-projects">
-      <dialog id="calculator-app" className="modal-image" /* open */>
-        <Calculator />
+      <dialog id="calculator-app" className="calculator-dialog" /* open */>
         <h1 onClick={() => closeCalculator()}>
           <span className="close-x">X</span> Zamknij
         </h1>
+        <Calculator />
       </dialog>
       <div className="sm-project-container" onClick={openCalculator}>
         <img
-          className="calculator-svg"
+          className="sm-project-icon"
           src="calculator.svg"
           alt="calculator icon"
         ></img>
@@ -39,7 +40,27 @@ export default function SmallerProjects() {
         <p>Calculator</p>
       </div>
 
-      <div className="sm-project-container placeholder">
+      <div className="sm-project-container green-bg">
+        <img
+          className="sm-project-icon"
+          src="calculator.svg"
+          alt="calculator icon"
+        ></img>
+        <p>placeholderplaceholderplaceholder</p>
+        <p>placeholder placeholder placeholder placeholder placeholder</p>
+      </div>
+
+      <div className="sm-project-container red-bg">
+        <img
+          className="sm-project-icon"
+          src="calculator.svg"
+          alt="calculator icon"
+        ></img>
+        <p>placeholderplaceholderplaceholder</p>
+        <p>placeholder placeholder placeholder placeholder placeholder</p>
+      </div>
+
+      <div className="sm-project-container green-bg">
         <img
           className="sm-project-icon"
           src="calculator.svg"
@@ -49,19 +70,9 @@ export default function SmallerProjects() {
         <p>placeholder</p>
       </div>
 
-      <div className="sm-project-container placeholder">
+      <div className="sm-project-container green-bg">
         <img
-          className="calculator-svg"
-          src="calculator.svg"
-          alt="calculator icon"
-        ></img>
-        <p>placeholder</p>
-        <p>placeholder</p>
-      </div>
-
-      <div className="sm-project-container placeholder">
-        <img
-          className="calculator-svg"
+          className="sm-project-icon"
           src="calculator.svg"
           alt="calculator icon"
         ></img>
