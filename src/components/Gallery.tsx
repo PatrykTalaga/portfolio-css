@@ -3,18 +3,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
-
+import { useState } from "react";
 import photos from "../assets/photos";
-import { useEffect, useRef, useState } from "react";
 
 export default function Gallery() {
   const [currentPhoto, setCurrentPhoto] = useState("");
-  const refGallery = useRef<HTMLDialogElement>(null); //react strict mode opens dialog element
-  useEffect(() => {
-    const dialogGallery = refGallery.current;
-    /*  dialogCalc.showModal(); */
-    if (dialogGallery) return () => dialogGallery.close();
-  }, []);
 
   function openModal() {
     const dialog = document.getElementById(
@@ -38,7 +31,7 @@ export default function Gallery() {
   }
   return (
     <div className="gallery">
-      <dialog ref={refGallery} id="gallery-dialog" className="modal-image" open>
+      <dialog id="gallery-dialog" className="modal-image">
         <img src={currentPhoto} alt="Photo" />
         <div className="x-overlay" onClick={() => closeModal()}>
           <b>X</b>

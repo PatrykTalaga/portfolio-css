@@ -1,18 +1,6 @@
-import { useEffect, useRef } from "react";
 import Calculator from "./Calculator";
 
 export default function SmallerProjects() {
-  const refCalc = useRef<HTMLDialogElement>(null); //react strict mode opens dialog element
-  useEffect(() => {
-    const dialogCalc = refCalc.current;
-    /*  dialogCalc.showModal(); */
-    if (dialogCalc)
-      return () => {
-        /* dialogCalc.showModal(); */
-        dialogCalc.close();
-      };
-  }, []);
-
   function openCalculator() {
     const calculatorDialog = document.getElementById(
       "calculator-app"
@@ -35,7 +23,7 @@ export default function SmallerProjects() {
 
   return (
     <div className="smaller-projects">
-      <dialog ref={refCalc} id="calculator-app" className="modal-image" open>
+      <dialog id="calculator-app" className="modal-image" /* open */>
         <Calculator />
         <h1 onClick={() => closeCalculator()}>
           <span className="close-x">X</span> Zamknij
