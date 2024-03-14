@@ -3,6 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
+import "./mainProjects.css";
 
 import projects from "../assets/projects";
 
@@ -11,8 +12,10 @@ export default function MainProjects() {
     <div className="main-projects">
       <Swiper
         breakpoints={{
-          340: { slidesPerView: 1, spaceBetween: 15 },
-          700: { slidesPerView: 2, spaceBetween: 15 },
+          480: { slidesPerView: 1, spaceBetween: 15 },
+          800: { slidesPerView: 2, spaceBetween: 15 },
+          1500: { slidesPerView: 3, spaceBetween: 15 },
+          1800: { slidesPerView: 2, spaceBetween: 15 },
         }}
         freeMode={true}
         pagination={{ clickable: true }}

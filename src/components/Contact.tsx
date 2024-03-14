@@ -1,4 +1,5 @@
 import contactData from "../assets/cv";
+import "./contact.css";
 
 export default function Contact() {
   return (

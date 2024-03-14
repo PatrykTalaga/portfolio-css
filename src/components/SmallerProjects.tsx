@@ -1,5 +1,5 @@
 import Calculator from "./Calculator";
-import "./SmallerProjects.css";
+import "./smallerProjects.css";
 
 export default function SmallerProjects() {
   function openCalculator() {

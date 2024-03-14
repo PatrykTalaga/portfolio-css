@@ -1,0 +1,87 @@
+.gallery {
+  width: 100%;
+}
+.gallery .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery .gallery-carousel {
+  height: 425px;
+  width: 90%;
+}
+
+.gallery img {
+  max-height: 350px;
+  max-width: 85vw;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.671);
+  transition: scale 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  scale: 100%;
+  cursor: pointer;
+}
+.gallery .swiper-pagination-bullet {
+  background-color: #0077ff;
+}
+
+.gallery #gallery-dialog {
+  display: none;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%; /* Optional: Ensure content fills available height */
+}
+
+.gallery #gallery-dialog img {
+  max-height: 90vh;
+  max-width: 80%;
+  box-shadow: none;
+}
+.gallery #gallery-dialog img:hover {
+  scale: 100%;
+  cursor: auto;
+}
+.gallery #gallery-dialog::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.863);
+}
+
+.gallery .x-overlay {
+  position: absolute;
+  top: 4rem; /* Adjust vertical spacing from the top */
+  right: 4rem; /* Adjust horizontal spacing from the right */
+  font-size: 2rem; /* Adjust font size for the "X" */
+  color: hsla(0, 0%, 0%, 0.788); /* Adjust color as needed */
+  background-color: hsl(0, 0%, 100%);
+  padding: 0.5rem 1.5rem; /* Add some padding if needed */
+  border-radius: 1rem; /* Optional rounded corners for the "X" */
+  cursor: pointer; /* Optional hover effect for interactivity */
+  transition: 0.2s ease-in;
+}
+.gallery .x-overlay:hover {
+  background-color: hsl(0, 100%, 50%);
+  color: white;
+}
+
+@media screen and (min-width: 480px) {
+  .gallery img {
+    max-height: 300px;
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery img {
+    max-height: 350px;
+    max-width: 475px;
+  }
+  .gallery img:hover {
+    scale: 120%;
+  }
+}

@@ -1,6 +1,6 @@
 import { evaluate } from "mathjs";
 import { useState } from "react";
-import "./Calculator.css";
+import "./calculator.css";
 
 export default function Calculator() {
   const [display, setDisplay] = useState("");

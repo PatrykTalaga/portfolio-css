@@ -1,5 +1,6 @@
 import cvData from "../assets/cv";
 import "./cvPhoto.jpg";
+import "./myCV.css";
 
 export default function MyCV() {
   return (

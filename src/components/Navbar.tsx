@@ -1,4 +1,5 @@
 import "../App.css";
+import "./navbar.css";
 
 type PropsType = {
   scrollToMainProjects: () => void;

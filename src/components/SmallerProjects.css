@@ -93,24 +93,31 @@
   width: 75%;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
+  .smaller-projects {
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 850px) {
+  .smaller-projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1600px) {
   .smaller-projects #calculator-app h1 {
     font-size: 1.5rem;
-
     padding: 1rem 1.5rem;
   }
   .close-x {
     font-size: 3rem;
-
     padding-right: 0.5rem;
   }
   .smaller-projects {
-    width: 40%;
     gap: 2.5rem;
     padding: 2rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-
   .smaller-projects .sm-project-container {
     min-height: 225px;
     border-radius: 2rem;

@@ -5,6 +5,7 @@ import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
 import { useState } from "react";
 import photos from "../assets/photos";
+import "./gallery.css";
 
 export default function Gallery() {
   const [currentPhoto, setCurrentPhoto] = useState("");
@@ -40,8 +41,9 @@ export default function Gallery() {
 
       <Swiper
         breakpoints={{
-          340: { slidesPerView: 2, spaceBetween: 15 },
-          700: { slidesPerView: 3, spaceBetween: 15 },
+          480: { slidesPerView: 1, spaceBetween: 15 },
+          920: { slidesPerView: 2, spaceBetween: 15 },
+          1650: { slidesPerView: 3, spaceBetween: 15 },
         }}
         freeMode={true}
         pagination={{ clickable: true }}
