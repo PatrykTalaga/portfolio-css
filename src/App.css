@@ -18,6 +18,22 @@
   transition: box-shadow 0.4s ease-in-out;
 }
 
+.header-container {
+  display: flex;
+  gap: 1rem;
+}
+.header-container button {
+  margin: auto 0rem;
+  padding: 0.5rem;
+  background-color: hsla(22, 100%, 50%, 0.849);
+  transition: 0.4s ease-in-out;
+}
+.header-container button:hover {
+  border-color: hsla(22, 100%, 50%, 0.849);
+  background-color: hsla(9, 100%, 50%, 0.849);
+  scale: 125%;
+}
+
 .navbar-container {
   z-index: 50;
   position: fixed;

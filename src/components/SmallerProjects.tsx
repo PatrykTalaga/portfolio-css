@@ -1,4 +1,5 @@
 import Calculator from "./Calculator";
+import PokeApi from "./PokeApi";
 import "./smallerProjects.css";
 
 export default function SmallerProjects() {
@@ -22,14 +23,43 @@ export default function SmallerProjects() {
     }
   }
 
+  function openNotAPokedex() {
+    const calculatorDialog = document.getElementById(
+      "notAPokedex-app"
+    ) as HTMLDialogElement;
+    if (calculatorDialog) {
+      calculatorDialog.close();
+      calculatorDialog.style.display = "flex";
+      calculatorDialog.showModal();
+    }
+  }
+  function closeNotAPokedex() {
+    const calculatorDialog = document.getElementById(
+      "notAPokedex-app"
+    ) as HTMLDialogElement;
+    if (calculatorDialog) {
+      calculatorDialog.style.display = "none";
+      calculatorDialog.close();
+    }
+  }
+
   return (
     <div className="smaller-projects">
-      <dialog id="calculator-app" className="calculator-dialog" /* open */>
+      {/* ***********************Dialog Elements**************************** */}
+      <dialog id="calculator-app" className="dialog-container" /* open */>
         <h1 onClick={() => closeCalculator()}>
           <span className="close-x">X</span> Zamknij
         </h1>
         <Calculator />
       </dialog>
+      {/* *********** */}
+      <dialog id="notAPokedex-app" className="dialog-container" /* open */>
+        <h1 onClick={() => closeNotAPokedex()}>
+          <span className="close-x">X</span> Zamknij
+        </h1>
+        <PokeApi />
+      </dialog>
+      {/* ****************************************************************** */}
       <div className="sm-project-container" onClick={openCalculator}>
         <img
           className="sm-project-icon"
@@ -40,24 +70,24 @@ export default function SmallerProjects() {
         <p>Calculator</p>
       </div>
 
+      <div className="sm-project-container red-bg" onClick={openNotAPokedex}>
+        <img
+          className="sm-project-icon"
+          src="calculator.svg"
+          alt="calculator icon"
+        ></img>
+        <p>Not A Pokedex</p>
+        <p>Not A Pokedex</p>
+      </div>
+
       <div className="sm-project-container green-bg">
         <img
           className="sm-project-icon"
           src="calculator.svg"
           alt="calculator icon"
         ></img>
-        <p>placeholderplaceholderplaceholder</p>
-        <p>placeholder placeholder placeholder placeholder placeholder</p>
-      </div>
-
-      <div className="sm-project-container red-bg">
-        <img
-          className="sm-project-icon"
-          src="calculator.svg"
-          alt="calculator icon"
-        ></img>
-        <p>placeholderplaceholderplaceholder</p>
-        <p>placeholder placeholder placeholder placeholder placeholder</p>
+        <p>placeholder</p>
+        <p>placeholder placeholder</p>
       </div>
 
       <div className="sm-project-container green-bg">

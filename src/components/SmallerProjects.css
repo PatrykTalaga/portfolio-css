@@ -41,24 +41,29 @@
 .smaller-projects .sm-project-container.green-bg {
   background-color: hsl(108, 100%, 42%);
 }
-
-.smaller-projects #calculator-app {
+.smaller-projects .projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid white;
+  border-radius: 2rem;
+  width: 75%;
+}
+/* Dialog Elements */
+/* Calculator app */
+.smaller-projects .dialog-container {
   z-index: 20;
-  /*  width: 100vw;
-  height: 100vh; */
   border: none;
   background: transparent;
   overflow: hidden;
   gap: 0.25rem;
   justify-content: center;
   align-items: center;
-  /*  min-height: 100%; */ /* Optional: Ensure content fills available height */
   color: black;
   display: none;
   flex-direction: column;
   overflow-y: scroll;
 }
-.smaller-projects #calculator-app h1 {
+.smaller-projects .dialog-container h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,23 +80,15 @@
   color: hsl(2, 100%, 51%);
   padding-right: 0.25rem;
 }
-.smaller-projects #calculator-app h1:hover {
+.smaller-projects .dialog-container h1:hover {
   color: hsl(2, 100%, 51%);
   /* border-color: hsl(2, 100%, 51%); */
   cursor: pointer;
 }
-
-.smaller-projects #calculator-app::backdrop {
+.smaller-projects dialog::backdrop {
   background-color: hsla(0, 0%, 0%, 0.438);
 }
-
-.smaller-projects .projects-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border: 2px solid white;
-  border-radius: 2rem;
-  width: 75%;
-}
+/* Not A Poketdex app */
 
 @media screen and (min-width: 600px) {
   .smaller-projects {
@@ -107,10 +104,10 @@
 @media screen and (min-width: 1600px) {
   .smaller-projects #calculator-app h1 {
     font-size: 1.5rem;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1rem;
   }
   .close-x {
-    font-size: 3rem;
+    font-size: 2rem;
     padding-right: 0.5rem;
   }
   .smaller-projects {

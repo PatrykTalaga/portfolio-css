@@ -58,9 +58,13 @@ function App() {
           />
         </div>
         <div className="placeholder"></div>
-        <h1 ref={mainProjectsRef} className="portfolio-header">
-          Zrealizowane Projekty
-        </h1>
+        <div className="header-container">
+          <h1 ref={mainProjectsRef} className="portfolio-header">
+            Zrealizowane Projekty
+          </h1>
+          <button>^</button>
+        </div>
+
         <MainProjects />
         <h1 ref={cvRef} className="portfolio-header">
           CV
