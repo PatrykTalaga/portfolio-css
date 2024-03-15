@@ -14,6 +14,10 @@ function App() {
   const galleryRef = useRef<null | HTMLHeadingElement>(null);
   const contactRef = useRef<null | HTMLHeadingElement>(null);
   const [mainProjectsHide, setMainProjectsHide] = useState(false);
+  const [cVHide, setCVHide] = useState(false);
+  const [smallerProjectsHide, setSmallerProjectsHide] = useState(false);
+  const [galleryHide, setGalleryHide] = useState(false);
+  const [contactHide, setContactHide] = useState(false);
 
   function scrollToMainProjects() {
     if (mainProjectsRef.current !== null) {
@@ -59,6 +63,7 @@ function App() {
           />
         </div>
         <div className="placeholder"></div>
+        {/* **************************** */}
         <div className="header-container">
           <h1 ref={mainProjectsRef} className="portfolio-header">
             Zrealizowane Projekty
@@ -76,34 +81,75 @@ function App() {
         >
           <MainProjects />
         </div>
-
-        <h1 ref={cvRef} className="portfolio-header">
-          CV
-        </h1>
-        <MyCV />
-        <h1 ref={smallerProjectsRef} className="portfolio-header">
-          Mniejsze Projekty
-        </h1>
-        <SmallerProjects />
-
+        {/* **************************** */}
+        <div className="header-container">
+          <h1 ref={cvRef} className="portfolio-header">
+            CV
+          </h1>
+          <button
+            className={`${cVHide ? "rotate-180" : ""}`}
+            onClick={() => setCVHide(!cVHide)}
+          >
+            ^
+          </button>
+          <p>{`${cVHide ? "Rozwiń" : "Zwiń"}`}</p>
+        </div>
+        <div className={`container-100 ${cVHide ? "display-none" : ""}`}>
+          <MyCV />
+        </div>
+        {/* **************************** */}
+        <div className="header-container">
+          <h1 ref={smallerProjectsRef} className="portfolio-header">
+            Mniejsze Projekty
+          </h1>
+          <button
+            className={`${smallerProjectsHide ? "rotate-180" : ""}`}
+            onClick={() => setSmallerProjectsHide(!smallerProjectsHide)}
+          >
+            ^
+          </button>
+          <p>{`${smallerProjectsHide ? "Rozwiń" : "Zwiń"}`}</p>
+        </div>
+        <div
+          className={`container-100 ${
+            smallerProjectsHide ? "display-none" : ""
+          }`}
+        >
+          <SmallerProjects />
+        </div>
+        {/* **************************** */}
         <div className="header-container">
           <h1 ref={galleryRef} className="portfolio-header">
             Galeria
           </h1>
           <button
-            className={`${mainProjectsHide ? "rotate-180" : ""}`}
-            onClick={() => setMainProjectsHide(!mainProjectsHide)}
+            className={`${galleryHide ? "rotate-180" : ""}`}
+            onClick={() => setGalleryHide(!galleryHide)}
           >
             ^
           </button>
-          <p className="">Hide</p>
+          <p>{`${galleryHide ? "Rozwiń" : "Zwiń"}`}</p>
         </div>
-        <Gallery />
-        <h1 ref={contactRef} className="portfolio-header">
-          Kontakt
-        </h1>
-
-        <Contact />
+        <div className={`container-100 ${galleryHide ? "display-none" : ""}`}>
+          <Gallery />
+        </div>
+        {/* **************************** */}
+        <div className="header-container">
+          <h1 ref={contactRef} className="portfolio-header">
+            Kontakt
+          </h1>
+          <button
+            className={`${contactHide ? "rotate-180" : ""}`}
+            onClick={() => setContactHide(!contactHide)}
+          >
+            ^
+          </button>
+          <p>{`${contactHide ? "Rozwiń" : "Zwiń"}`}</p>
+        </div>
+        <div className={`container-100 ${contactHide ? "display-none" : ""}`}>
+          <Contact />
+        </div>
+        {/* **************************** */}
       </div>
     </>
   );
