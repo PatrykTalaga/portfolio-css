@@ -2,7 +2,7 @@ import "./App.css";
 import MyCV from "./components/MyCV";
 import Navbar from "./components/Navbar";
 import MainProjects from "./components/MainProjects";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Gallery from "./components/Gallery";
 import SmallerProjects from "./components/SmallerProjects";
 import Contact from "./components/Contact";
@@ -13,6 +13,7 @@ function App() {
   const smallerProjectsRef = useRef<null | HTMLHeadingElement>(null);
   const galleryRef = useRef<null | HTMLHeadingElement>(null);
   const contactRef = useRef<null | HTMLHeadingElement>(null);
+  const [mainProjectsHide, setMainProjectsHide] = useState(false);
 
   function scrollToMainProjects() {
     if (mainProjectsRef.current !== null) {
@@ -62,10 +63,20 @@ function App() {
           <h1 ref={mainProjectsRef} className="portfolio-header">
             Zrealizowane Projekty
           </h1>
-          <button>^</button>
+          <button
+            className={`${mainProjectsHide ? "rotate-180" : ""}`}
+            onClick={() => setMainProjectsHide(!mainProjectsHide)}
+          >
+            ^
+          </button>
+          <p>{`${mainProjectsHide ? "Rozwiń" : "Zwiń"}`}</p>
+        </div>
+        <div
+          className={`container-100 ${mainProjectsHide ? "display-none" : ""}`}
+        >
+          <MainProjects />
         </div>
 
-        <MainProjects />
         <h1 ref={cvRef} className="portfolio-header">
           CV
         </h1>
@@ -74,13 +85,24 @@ function App() {
           Mniejsze Projekty
         </h1>
         <SmallerProjects />
-        <h1 ref={galleryRef} className="portfolio-header">
-          Galeria
-        </h1>
+
+        <div className="header-container">
+          <h1 ref={galleryRef} className="portfolio-header">
+            Galeria
+          </h1>
+          <button
+            className={`${mainProjectsHide ? "rotate-180" : ""}`}
+            onClick={() => setMainProjectsHide(!mainProjectsHide)}
+          >
+            ^
+          </button>
+          <p className="">Hide</p>
+        </div>
         <Gallery />
         <h1 ref={contactRef} className="portfolio-header">
           Kontakt
         </h1>
+
         <Contact />
       </div>
     </>
