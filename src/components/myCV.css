@@ -51,20 +51,21 @@
     font-size: 2.5;
   }
   .cv h2 {
-    margin: 1rem 0;
-    font-size: 2rem;
+    margin: 0.25rem 0;
+    font-size: 1.5rem;
   }
   .cv p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .cv img {
     float: left;
     margin-right: 2rem;
-    height: 300px;
+    height: 275px;
     border-radius: 2rem;
-    margin: 0rem 2rem 0rem 0rem;
+    margin: 0rem 2rem 0.5rem 0rem;
   }
   .cv ol {
+    margin: 0.5rem 0;
     padding-inline-start: 2rem;
   }
 }

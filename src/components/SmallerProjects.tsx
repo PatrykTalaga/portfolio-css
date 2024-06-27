@@ -87,7 +87,10 @@ export default function SmallerProjects() {
           alt="calculator icon"
         ></img>
         <p>placeholder</p>
-        <p>placeholder placeholder</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+          asperiores praesentium dolorem nihil, omnis animi.
+        </p>
       </div>
 
       <div className="sm-project-container green-bg">

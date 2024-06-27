@@ -22,7 +22,7 @@
   border-radius: 2rem;
   padding: 0 0.5rem;
   /* padding-bottom: 1rem; */
-  box-shadow: 4px 4px 10px black;
+  box-shadow: 4px 4px 10px hsla(0, 0%, 0%, 0.65);
   transition: 0.5s ease-in-out;
 }
 .smaller-projects .sm-project-icon {
