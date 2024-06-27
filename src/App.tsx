@@ -1,11 +1,12 @@
 import "./App.css";
 import MyCV from "./components/MyCV";
 import Navbar from "./components/Navbar";
-import MainProjects from "./components/MainProjects";
 import { useRef, useState } from "react";
 import Gallery from "./components/Gallery";
 import SmallerProjects from "./components/SmallerProjects";
 import Contact from "./components/Contact";
+import MainProjects3D from "./components/MainProjects3D";
+/* import MainProjects from "./components/MainProjects"; */
 
 function App() {
   const mainProjectsRef = useRef<null | HTMLHeadingElement>(null);
@@ -63,7 +64,9 @@ function App() {
           />
         </div>
         <div className="placeholder"></div>
+        {/* keeps space for navbar */}
         {/* **************************** */}
+
         <div className="header-container">
           <h1 ref={mainProjectsRef} className="portfolio-header">
             Zrealizowane Projekty
@@ -79,8 +82,9 @@ function App() {
         <div
           className={`container-100 ${mainProjectsHide ? "display-none" : ""}`}
         >
-          <MainProjects />
+          <MainProjects3D />
         </div>
+
         {/* **************************** */}
         <div className="header-container">
           <h1 ref={cvRef} className="portfolio-header">

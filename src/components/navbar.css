@@ -28,7 +28,8 @@
   box-shadow: 7px 7px hsla(22, 100%, 50%, 0.514); */
 }
 .navbar.hidden {
-  opacity: 0;
+  /*  visibility: hidden; */
+  display: none; /* so it doesnt block clicks */
 }
 @media screen and (min-width: 480px) {
   .navbar {
